@@ -16,11 +16,23 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+    {{#vuex}}
+    <h2>A counter based on <a href="http://vuex.vuejs.org/" target="_blank">vuex</a></h2>
+    <v-counter></v-counter>
+    {{/vuex}}
   </div>
 </template>
 
 <script>
+{{#vuex}}
+import Counter from './components/Counter.vue'
+{{/vuex}}
 export default {
+{{#vuex}}
+  components: {
+    'v-counter': Counter
+  },
+{{/vuex}}
   name: 'app',
   data () {
     return {
