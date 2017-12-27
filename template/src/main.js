@@ -6,10 +6,8 @@ import store from './store'
 
 new Vue({
   {{#vuex}}
-  "node-sass": "^4.5.3",
-  "sass-loader": "^6.0.6",
-  {{/vuex}}
   store,
+  {{/vuex}}
   el: '#app',
   render: h => h(App)
 })
